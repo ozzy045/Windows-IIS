@@ -27,4 +27,6 @@ Windows server app
 * Browse to “http://localhost:5100/” from your microsoft machine
 * Does it works? If not, make it work
 
-**Make sure you get this result**
+**Make sure you get this result:**
+
+![GitHub Logo](https://github.com/ozzy045/Windows-IIS/blob/master/Example.JPG)
