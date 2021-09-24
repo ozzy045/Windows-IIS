@@ -10,13 +10,14 @@ Windows server app
 
 
 ## Part 1: Create and build a website
-* Create “ASP.NET Core Web App” project :heavy_check_mark: **Create new project with VS 2019 and search “ASP.NET Core Web App”**
+* Create “ASP.NET Core Web App” project :heavy_check_mark: **Create new project with VS 2019 and search “ASP.NET Core Web App” and select .NET 5.0 as the target framework**
 * Check your csproj content :heavy_check_mark: **That is the main project file**
-* Add “Newtonsoft.Json” :heavy_check_mark: **Use package manager**
-* Check your csproj again, what changed?
-* Restore Nuget Packages
-* Compile (rebuild) your project :heavy_check_mark: **right click on your project and rebuild!**
-* Which files and folders were created? 
+* Add “Newtonsoft.Json”. The Newtonsoft.Json namespace provides classes that are used to implement the core services of the framework.
+ :heavy_check_mark:  **Use package manager**
+* Restore Nuget Packages. it will detect dependencies from one of several sources, and then retrieve those dependencies in an idempotent operation from an arbitrary location.
+* Compile (rebuild) your project. :heavy_check_mark: **right click on your project and rebuild!**
+  * Compile project files - translates the files you wrote in a language you understand to a language the computer understands (The CPU).
+  * It will create binary and executable files.
 * Publish your application 
   * Right click on your project and publish
   * On the publish popup select target 'folder'
@@ -26,6 +27,8 @@ Windows server app
 
 ## Part 2: Create website on your Microsoft machine
 * Add IIS to your windows server :heavy_check_mark: **follow the first recommendation link**
+  * This is an important part! without it nothing will work.
+  * Make sure you have installed .NET 5.0 on your server!
 * Create a new IIS application pool 
   * run IIS and navigate to the "Aplication Pools" tab.
   * Add a new Application pool, give it a proper name and select "No Managed Code" in ".Net CLR Version"
@@ -35,7 +38,7 @@ Windows server app
   * In the "Physical Path" navigate to "\interpub\wwwroot\" and make a new folder, then select this folder and click OK
   * use port 5100 and click OK
 * Copy your website to your windows server
-  * Right click your new site and click "Explore" 
+  * Right click on your new site and click "Explore" 
   * You see an empty folder, this is where you locate the app files we published before
   * Best-Practice: stop the application pool before making any changes in this folder.
   * if you having trouble copying your files, try this:
